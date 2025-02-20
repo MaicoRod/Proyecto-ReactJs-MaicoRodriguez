@@ -1,33 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import ItemListcontainer from './components/itemListContainer/itemListcontainer';
+import Navbar from './components/navbar/Navbar';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function App () {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar />
+      <ItemListcontainer 
+      greeting ={{
+        title: '¡Bienvenidos a QueCel',
+        mensaje: 'En QueCel, nos apasiona brindarte los mejores productos de tecnología móvil, desde los últimos modelos de teléfonos inteligentes hasta una amplia variedad de artículos diseñados para mejorar tu experiencia con tu dispositivo. Nuestro objetivo es que encuentres lo que necesitas para mantenerte conectado, eficiente y entretenido en el mundo digital de hoy.'
+      }}
+        />
     </>
   )
 }
