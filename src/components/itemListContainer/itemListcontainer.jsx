@@ -1,12 +1,28 @@
+import React from "react";
+import { useParams } from "react-router-dom";
+import ItemList from "../itemList/itemList";
+import useFetch from "../useFetch/useFetch";
+import { CircularProgress, Typography, Box } from "@mui/material";
 
+const ItemListContainer = () => {
+  const { id: categoryId } = useParams();
+  const { data: items, loading, error } = useFetch("/public/productos.json");
 
-const itemListcontainer = ({greeting}) => {
+  if (loading) return <CircularProgress />;
+  if (error) return <Typography>Error: {error}</Typography>;
+
+  const filteredItems = categoryId
+    ? items.filter((item) => item.category === categoryId)
+    : items;
+
   return (
-    <>
-        <h1 style={{textAlign:'center', color:'black'}}>{greeting.title}</h1>
-        <p style={{color:'black'}}>{greeting.mensaje}</p>
-    </>
-  )
-}
+    <Box>
+      <Typography variant="h4">
+        {categoryId ? `Categoría: ${categoryId}` : "Productos"}
+      </Typography>
+      <ItemList items={filteredItems} />
+    </Box>
+  );
+};
 
-export default itemListcontainer
+export default ItemListContainer;
