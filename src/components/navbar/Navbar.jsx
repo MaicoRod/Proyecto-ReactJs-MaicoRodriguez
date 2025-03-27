@@ -39,7 +39,7 @@ const Navbar = () => {
           <CartWidget />
         </Toolbar>
       </AppBar>
-      <Box sx={{ mt: 8 }} /> {/* Espacio para evitar que el navbar tape contenido */}
+      <Box sx={{ mt: 8 }} /> 
     </>
   );
 };
