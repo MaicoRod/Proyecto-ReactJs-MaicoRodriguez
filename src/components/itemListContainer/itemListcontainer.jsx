@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../itemList/itemList";
-import useFetch from "../useFetch/useFetch";
+import useFetch from "../useFetch/UseFetch";
 import { CircularProgress, Typography, Box } from "@mui/material";
 
 const ItemListContainer = () => {

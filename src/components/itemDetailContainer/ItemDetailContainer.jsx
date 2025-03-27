@@ -1,7 +1,7 @@
 import { CircularProgress, Typography, Box } from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
-import useFetch from "../useFetch/useFetch";
+import useFetch from "../useFetch/UseFetch";
 import ItemDetail from "../itemDetail/ItemDetail";
 import ItemCount from "../itemCount/ItemCount";
 
