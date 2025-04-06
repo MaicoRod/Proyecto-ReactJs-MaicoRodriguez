@@ -3,7 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../useFetch/UseFetch";
 import ItemDetail from "../itemDetail/ItemDetail";
-import ItemCount from "../itemCount/ItemCount";
+
 
 const ItemDetailContainer = () => {
     const { id: itemId } = useParams();
@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
     }
 
     const handleAddToCart = (quantity) => {
-
+        
     };
 
     return (
@@ -31,7 +31,6 @@ const ItemDetailContainer = () => {
                 pictureUrl={selectedItem.pictureUrl}
                 stock={selectedItem.stock}
             />
-            <ItemCount stock={selectedItem.stock} onAdd={handleAddToCart} />
         </Box>
     );
 };

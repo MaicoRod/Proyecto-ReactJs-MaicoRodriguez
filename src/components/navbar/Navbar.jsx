@@ -2,6 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, Box, Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import CartWidget from "../cartWidget/CartWidget";
+import logo from "../../assets/quecel.svg";
 
 const Navbar = () => {
   const categories = ["Equipos", "Accesorios", "Ofertas"];
@@ -10,17 +11,14 @@ const Navbar = () => {
     <>
       <AppBar position="fixed" sx={{ backgroundColor: "#007BFF" }}>
         <Toolbar>
-          <NavLink
-            to="/"
-            style={({ isActive }) => ({
-              textDecoration: "none",
-              color: isActive ? "#FFD700" : "white",
-              fontWeight: "bold",
-              fontSize: "20px",
-            })}
-          >
-            QueCel
+          <NavLink to="/" style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src={logo}
+              alt="Logo QueCel"
+              style={{ height: "50px" }}
+            />
           </NavLink>
+
           <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
             {categories.map((category) => (
               <NavLink
@@ -39,7 +37,7 @@ const Navbar = () => {
           <CartWidget />
         </Toolbar>
       </AppBar>
-      <Box sx={{ mt: 8 }} /> 
+      <Box sx={{ mt: 8 }} />
     </>
   );
 };

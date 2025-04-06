@@ -6,7 +6,7 @@
         "pictureUrl": "https://www.otero.com.ar/Image/0/1500_1500-241147_1.jpg",
         "description": "Un smartphone accesible con pantalla HD+ de 6.5 pulgadas y batería de larga duración.",
         "stock": 7,
-        "category": "Equipos"
+        "category": "equipos"
     },
     {
         "id": 1,
@@ -15,7 +15,7 @@
         "pictureUrl": "https://www.otero.com.ar/Image/0/700_700-241130_1.jpg",
         "description": "Un potente smartphone con cámara de 50MP y pantalla Super AMOLED de 6.4 pulgadas.",
         "stock": 10,
-        "category": "Equipos"
+        "category": "equipos"
     },
     {
         "id": 2,
@@ -24,16 +24,16 @@
         "pictureUrl": "https://www.otero.com.ar/Image/0/700_700-241138_1.jpg",
         "description": "Equilibrio entre rendimiento y precio con su procesador Octa-Core y batería de 5000mAh.",
         "stock": 5,
-        "category": "Equipos"
+        "category": "equipos"
     },
     {
         "id": 3,
         "title": "Kodak Seren D55L",
         "price": 200000,
         "pictureUrl": "https://www.otero.com.ar/Image/0/700_700-241044_11.jpg",
-        "description": "Smart TV de 55 pulgadas con resolución 4K y sistema Android TV para una experiencia envolvente.",
+        "description": "Una excelente opción para aquellos que buscan un dispositivo confiable y funcional. Con una capacidad de batería de 2000 mAh.",
         "stock": 8,
-        "category": "Ofertas"
+        "category": "ofertas"
     },
     {
         "id": 4,
@@ -42,7 +42,7 @@
         "pictureUrl": "https://acdn.mitiendanube.com/stores/001/643/020/products/powerbank-hbl-pow02-ultra-slim-7a8000031159342dfa17210810868771-640-0.webp",
         "description": "Batería portátil de alta capacidad para cargar dispositivos en cualquier lugar.",
         "stock": 6,
-        "category": "Accesorios"
+        "category": "accesorios"
     },
     {
         "id": 5,
@@ -51,7 +51,7 @@
         "pictureUrl": "https://acdn.mitiendanube.com/stores/001/643/020/products/noga-ng-sw09-negro-cc5c24ddb3dbdd37df17178595739505-640-0.webp",
         "description": "Reloj inteligente con monitoreo de actividad, pulsaciones y notificaciones.",
         "stock": 9,
-        "category": "Accesorios"
+        "category": "accesorios"
     },
     {
         "id": 6,
@@ -60,7 +60,7 @@
         "pictureUrl": "https://acdn.mitiendanube.com/stores/001/643/020/products/auriculares-soul-s389-negro-f1900575a59345550b17138260481909-640-0.webp",
         "description": "Auriculares cómodos con sonido envolvente y diseño ergonómico.",
         "stock": 3,
-        "category": "Accesorios"
+        "category": "accesorios"
     },
     {
         "id": 7,
@@ -69,6 +69,6 @@
         "pictureUrl": "https://acdn.mitiendanube.com/stores/001/643/020/products/auriculares-soul-tws-700-negro-9150229e98637249cd17138279843017-640-0.webp",
         "description": "Auriculares inalámbricos con estuche de carga y conectividad Bluetooth.",
         "stock": 4,
-        "category": "Accesorios"
+        "category": "accesorios"
     }
 ]
