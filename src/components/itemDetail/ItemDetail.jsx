@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Card, CardContent, CardMedia, Typography, Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ItemCount from "../itemCount/ItemCount";
+import { CartContext } from "../cartContext/CartContext";
 
-const ItemDetail = ({ title, description, price, pictureUrl, stock }) => {
+const ItemDetail = ({ id, title, description, price, image, stock }) => {
 
     const [ quantity, setQuantity] = useState(0);
-    
+    const { addItem} = useContext(CartContext);
     const navigate = useNavigate();
     
     const handleAdd = (count) => {
@@ -14,8 +15,12 @@ const ItemDetail = ({ title, description, price, pictureUrl, stock }) => {
     };
 
     const handleFinishPuchase = () => {
-        console.log("Finalizando compra con cantidad:", quantity);
-        navigate("/cart", { state: { quantity } });
+
+       addItem(
+            {id, title, price, description, image},
+            quantity
+        );
+        navigate("/cart");
     };
 
     return (
@@ -23,7 +28,7 @@ const ItemDetail = ({ title, description, price, pictureUrl, stock }) => {
             <Card sx={{ width: "100%", maxWidth: 600 }}>
                 <CardMedia
                     component="img"
-                    image={pictureUrl || "https://via.placeholder.com/600"} // Imagen por defecto
+                    image={image || "https://via.placeholder.com/600"} // Imagen por defecto
                     alt={title || "Producto"}
                 />
                 <CardContent>
@@ -45,9 +50,7 @@ const ItemDetail = ({ title, description, price, pictureUrl, stock }) => {
                         <Button variant="contained" color="success" onClick={handleFinishPuchase} sx={{ marginTop: 2 }}>
                             Finalizar compra
                         </Button>
-                    )}
-
-
+                    )}  
                 </CardContent>
             </Card>
         </Box>

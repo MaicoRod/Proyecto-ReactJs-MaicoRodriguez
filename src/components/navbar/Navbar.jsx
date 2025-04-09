@@ -1,7 +1,7 @@
 import React from "react";
 import { AppBar, Toolbar, Box, Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
-import CartWidget from "../cartWidget/CartWidget";
+import Cartwidget from "../cartWidget/Cartwidget";
 import logo from "../../assets/quecel.svg";
 
 const Navbar = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
               </NavLink>
             ))}
           </Box>
-          <CartWidget />
+          <Cartwidget />
         </Toolbar>
       </AppBar>
       <Box sx={{ mt: 8 }} />
