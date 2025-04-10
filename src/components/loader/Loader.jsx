@@ -4,7 +4,7 @@ import { use } from "react";
 
 
 
-const Loader = ({ loading, timeout = 5000}) => {
+const Loader = ({ loading, timeout = 3000}) => {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const Loader = ({ loading, timeout = 5000}) => {
     if (!visible) return null; 
 
     return (
-        <Box sx={{ display: "flex", flexDirection:"column", alignItems: "center", marginTop: 4 }}>
+        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", flexDirection: "column" }}>
             <CircularProgress />
             <Typography variant="body1" sx={{ marginTop: 2 }}>
                 Cargando, por favor espere...

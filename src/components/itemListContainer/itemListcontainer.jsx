@@ -5,6 +5,7 @@ import useFetch from "../useFetch/UseFetch";
 import { CircularProgress, Typography, Box } from "@mui/material";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/client";
+import Loader from "../loader/Loader";
 
 const ItemListContainer = () => {
   const { id: categoryId } = useParams();
@@ -36,7 +37,7 @@ const ItemListContainer = () => {
     productsDetail();
 }, [categoryId]);
 
-if (loading) return <CircularProgress />;
+if (loading) return <Loader loading={loading} />;
   
   /* const { data: items, loading, error } = useFetch("/public/productos.json");
 
