@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, Box, Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Cartwidget from "../cartWidget/Cartwidget";
-import logo from "../../assets/quecel.svg";
+
 
 const Navbar = () => {
   const categories = ["Equipos", "Accesorios", "Ofertas"];
@@ -13,7 +13,7 @@ const Navbar = () => {
         <Toolbar>
           <NavLink to="/" style={{ display: "flex", alignItems: "center" }}>
             <img
-              src={logo}
+              src="/quecel.svg"
               alt="Logo QueCel"
               style={{ height: "50px" }}
             />
