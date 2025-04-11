@@ -6,7 +6,7 @@ const Item = ({ id, title, description, price, image }) => {
     const navigate = useNavigate();
 
     return (
-        <Card sx={{ maxWidth: 300, margin: 2, overflow: "hidden", border: 0.05, borderRadius:4, textAlign:"center" }}>
+        <Card sx={{ maxWidth: 300, margin: 2, overflow: "hidden", borderRadius:4, boxShadow:2, transition:"transform 0.3s ease, box-shadow 0.3s ease", "&:hover":{transform:"scale(1.05)", boxShadow:6,}, textAlign:"center" }}>
             <CardMedia
                 component="img"
                 image={image || "/assets/images/default-image.jpg"} 

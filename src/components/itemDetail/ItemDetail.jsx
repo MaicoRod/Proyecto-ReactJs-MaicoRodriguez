@@ -12,14 +12,11 @@ const ItemDetail = ({ id, title, description, price, image, stock }) => {
     
     const handleAdd = (count) => {
         setQuantity(count);
+        addItem(
+            {id, title, price, description, image},count);
     };
 
     const handleFinishPuchase = () => {
-
-       addItem(
-            {id, title, price, description, image},
-            quantity
-        );
         navigate("/cart");
     };
 
@@ -42,7 +39,7 @@ const ItemDetail = ({ id, title, description, price, image, stock }) => {
                         Precio: ${price || "0.00"}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ marginTop: 1 }}>
-                        Stock disponible: {stock > 0 ? stock : "Sin stock"}
+                        Stock disponible: {stock} 
                     </Typography>
                     {quantity === 0 ? (
                         <ItemCount stock={stock} onAdd={handleAdd} />
