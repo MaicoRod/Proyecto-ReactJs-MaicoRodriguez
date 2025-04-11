@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ItemList from "../itemList/itemList";
+import ItemList from "../itemList/ItemList";
 import { Typography, Box } from "@mui/material";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/client";
